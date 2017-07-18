@@ -1,0 +1,93 @@
+<html>
+<head>
+<style>
+
+#ta {
+    background-color: lightblue;
+    border: 3px solid #555;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div layout="column" ng-cloak >
+
+<!--user info-->
+ <md-content md-theme="docs-dark" layout-gt-sm="col" layout-padding>
+
+   <form name="blogForm" style="float: left;">   
+    <div>
+     
+      <md-input-container>
+        <label>Name</label>
+        <input ng-model="user.name" required>
+                  
+      </md-input-container>
+
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>about you</label>
+        <input ng-model="user.desc" type="text" flex>
+        
+      </md-input-container>
+
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Blog Title</label>
+        <input ng-model="user.title" type="text" flex required>
+
+           <div ng-messages="blogForm.user.title.$error" role="alert">
+                     <div ng-message-exp="['required']">
+                        title is required.
+                     </div>
+        
+      </md-input-container>
+    
+
+    <!--<div flex-gt-xs>
+      <h4>Event date</h4>
+      <md-datepicker ng-model="user.myDate" md-placeholder="Enter date"></md-datepicker>
+    </div>-->
+          
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Img url</label>
+        <input ng-model="user.imgUrl" type="text" flex>
+      </md-input-container>
+
+
+       
+
+
+
+
+    <md-input-container class="md-block" flex-gt-sm>
+    <md-button class="md-raised" ng-click="subBlog()">Submit</md-button>
+    </md-input-container>
+
+
+   
+        
+      
+   
+    </div>  
+   </form>
+ 
+  </md-content>
+<br>
+<br>
+
+</div>
+
+</div>
+
+    <div class="container">
+      <textarea id="ta" ng-model="myTextarea" rows="10" style="min-width: 50%" placeholder="write a post..." required flex></textarea>
+      </div>
+     
+
+
+</body>
+</html>

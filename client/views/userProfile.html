@@ -1,0 +1,144 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+            <style>
+            .sha{
+                border:none;
+                height: 20px;
+                    width: 90%;
+                    height: 50px;
+                    margin-top: 0;
+                    border-bottom: 1px solid #1f1209;
+                    box-shadow: 0 20px 20px -20px #333;
+                margin: -50px auto 10px; 
+                }
+
+            </style>
+
+
+    </head>
+    <body>
+
+
+
+<body  class="w3-light-grey">
+
+<header class="w3-container w3-center w3-padding-32"> 
+  
+  <div class="container" style="display: inline-block;">
+      
+      <p><h3><span class="w3-tag"><h1><b>PROFILE</b></h1></span></h3></p>
+    
+  <hr class="sha">
+  </div>
+
+              
+
+</header>
+
+
+
+<div class="container">
+
+
+
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row">
+  
+    <!-- Left Column -->
+    <div id="menu" class="w3-third">
+    
+   
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="assets/images/avatars/1.jpg" style="width:100%" alt="Avatar">
+          <br><br>
+          <div class="w3-display-bottomleft w3-container w3-text-teal">
+           
+            <h4><span class="w3-tag w3-text-teal">{{currentUser.email.split('@')[0]}}</span></h4>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>{{currentUser.uid}}</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>{{currentUser.email}}</p>
+          <p style="background-color:tomato" ng-show="!currentUser.emailVerified"><a ng-href="mailto:{{currentUser.email}}" target="_blank"><font size="2" color="white"> verify your email ! </font>
+</a>
+          
+          <hr class="sha">
+
+
+        </div>
+
+        </div>   
+    </div>
+   <!-- end Left Column -->
+
+    <!-- right Column -->
+            <div class="w3-twothird" id="main">
+                
+                    <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>{{currentUser.email}}</h2>
+                    
+                    
+                    
+                    
+                        
+                        
+                          <hr class="sha">
+                    <div>
+                            <md-content>
+                            <md-input-container class="md-block" style="float: right;">
+                            <md-button class="md-raised btn btn-danger" ng-click="logout()"> logout </md-button>
+                                </md-input-container>
+                           
+                            <md-input-container class="md-block" ng-init="postToggle=false" style="float: left;">
+                            <md-button class="md-raised btn btn-success" ng-click="postToggle = !postToggle"> Post </md-button>
+                            </md-input-container>
+                           
+
+
+                           
+                            <md-input-container class="md-block" style="float: left;">
+                            <md-button class="md-raised btn btn-info"> Payment </md-button>
+                            </md-input-container>
+                           
+                           
+                            </md-content>
+
+
+                    </div>     
+
+                    
+                     
+            </div>
+
+                        <div class="container" ng-show="postToggle" style="margin: 30px; background-color: crimson">
+                                
+                                <md-content class="md-padding">
+                                 
+                                    <div blog></div>
+                                </md-content>
+                    </div>
+
+                    
+            </div>
+ <!-- end right Column -->
+
+</div>
+ <!-- end Grid -->
+
+</div>
+ <!-- end page content -->
+
+</div>
+    </body>
+</html>

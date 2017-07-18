@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>HEROKU BLOG </b></h1>
+  <div><p>Welcome <h3><span class="w3-tag">feel free to share</span></h3></p></div>
+</header>
+
+
+
+
+<div class="w2-row">
+<div ng-repeat="blogInit in blogList">
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  
+  <!-- Blog entry -->
+  
+
+  <div class="w3-card-4 w3-margin w3-white">
+    <img ng-src="{{blogInit.imgUrl}}" alt="Nature" style="width:100%">
+    
+    <div class="w3-container">
+      <h3><b ng-bind="blogInit['title']"></b></h3>
+      <h5 ng-bind="blogInit['date']"> <span class="w3-opacity"></span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p ng-bind="blogInit['content']"></p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE &raquo;</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments &nbsp;</b> <span class="w3-tag">0</span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
+
+
+<div class="w3-col l4">
+ 
+  <!-- About Card -->
+  <div class="w3-card-2 w3-margin w3-margin-top">
+  <img ng-src="assets/images/avatars/5.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <h4><b ng-bind="blogInit['name']"></b></h4>
+      <p ng-bind="blogInit['desc']"></p>
+    </div>
+  </div><hr>
+
+
+      
+
+</div>
+
+</div>
+<!--repeat!-->

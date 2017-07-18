@@ -1,0 +1,75 @@
+
+
+
+
+
+
+            <!--<form name="projectForm" >
+               <md-input-container class="md-block">
+                  <label>Email</label>
+                  <input required type="email" name="userEmail" ng-model="user.email"
+                     maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                  <div ng-messages="projectForm.userEmail.$error" role="alert">
+                     <div ng-message-exp="['required']">
+                        should be a valid email address.
+                     </div>
+                  </div>
+               </md-input-container>
+
+                <md-input-container class="md-block">
+                  <label>Password</label>
+                  <input required name="Password" type="password" ng-model="user.password">
+                  <div ng-messages="projectForm.userName.$error">
+                     <div ng-message="required">This is required.</div>
+                  </div>
+               </md-input-container>
+
+
+                    <md-input-container class="md-block">
+                   <md-button class="md-raised" ng-click="emailLogin()"> Login </md-button>
+                    </md-input-container>
+
+            </form>
+       -->
+<md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding ng-show="loginToggle" ng-init="loginToggle=true">
+    <div >
+
+      <form name="projectForm" style="float: left;">      
+      <md-input-container>
+        <label>Email</label>
+        <input ng-model="user.email" type="email" maxlength="100" ng-pattern="/^.+@.+\..+$/" required>
+        <div ng-messages="projectForm.user.email.$error" role="alert">
+                     <div ng-message-exp="['required']">
+                        should be a valid email address.
+                     </div>
+                  </div>
+      </md-input-container>
+    
+    
+     <md-input-container>
+        <label>password</label>
+        <input type="password" ng-model="user.password" minlength="6" required>
+        <div ng-messages="projectForm.user.password.$error" role="alert">
+                     <div  ng-if="projectForm.user.password.$error">one uppercase , 6 characters are required.</div>
+                  </div>
+      </md-input-container>
+  
+  <md-content>
+                <md-input-container class="md-block" style="float: left;">
+                   <md-button class="md-warn md-raised" ng-click="signinWithEmail()"> Login </md-button>
+                    </md-input-container>
+
+                    <md-input-container class="md-block" style="float: left;">
+                   <md-button class="md-raised" ng-click="signupWithEmail()"> Signup </md-button>
+                    </md-input-container>
+  </md-content> 
+
+  <md-content>
+          {{loginError}}
+  </md-content>
+      </form>
+  </div>
+
+
+
+  </md-content>

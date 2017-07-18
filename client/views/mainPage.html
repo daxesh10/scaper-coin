@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<title>Dex intro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkuwz8CqnMiKDiWZYNezeBbHXbxcdNXZE&callback=myMap"></script>
+ <script src="/js/style.js"></script>
+
+
+
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#skill" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Skills</a>
+    <a href="#projects" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Projects</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" style="width: 200px;height: 5%;">SCRAPER COIN</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <p class="w3-center"><em>I am full stack developer</em></p>
+  <p>I have created my personal website/blog, for showing my skill set and my work further more to integrate it with Dapps. I just graduate for my master's degree in computer science.
+     personally I am a creative thinkiner and like to pursue new ideas. Apart from my accademics and work, I am intrested in playing sports, have won sevral medals in hockey and was able to represent my province back in my country. To be honest most of things I know is from google
+     all the upcomming technolgy i have learned from there  </p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Dexter</b></p><br>
+      <img src="/assets/images/my.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+<div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/daxesh.mehra"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+   
+</div>
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>Welcome to my website. Is is about my exsisting and upcoming projects that i am working on. I am currently working on Decentralized Application (or 'Dapp'), it is a piece of software consisting of a user interface (UI) and a decentralized backend; 
+          typically making use of a blockchain and smart contracts or paperless contract. i am using Ethereum blockchain for my projects- a popular development platform for creating dapps.
+          Bitcoin is also a blockchain technolgy but it is not that programmable</p>
+          <p>I have also made scrapping software using selenium and npm modules for scrapping data from website, Every website has DOM elements and it changes after performing some action like mouseover or click . So i am making those event occur on the webistes and scrapping the essestial data from the websites like Linkedin, Indeed , Monster etc. There are other website and web Apps i have worked on too. but these webistes are the main one</p>
+          <p>I have also done many freelancing projects for direct client depending on their requirements i make websites for them. </p>  
+    </div>
+  </div>
+  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+  <p class="w3-wide"><i class="fa fa-camera"></i>Web Design/Ui /front-end</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Development</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+   <p class="w3-wide"><i class="fa fa-photo"></i>Testing</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+   <p class="w3-wide"><i class="fa fa-photo"></i>Android Development</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%">70%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div>
+ 
+</div>
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">6+</span><br>
+    Education
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">5+</span><br>
+    Projects Done
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">3+</span><br>
+    Work Experience
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">9+</span><br>
+    Technolgy
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">Skills</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="skill">
+  <h3 class="w3-center">MY Skills</h3>
+  <p class="w3-center"><em>Here are some skills that I have worked on.<br> </em></p><br>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal-content w3-card-4" style="display: none;" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+
+
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="https://www.w3schools.com/angular/pic_angular.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Angular JS">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://node-os.com/assets/images/nodejs.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Node JS">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-512.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="firebase"" closeup">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://www.shaneofalltrades.com/css/images/nightwatch-logo.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Nightwatch">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="http://www.ecsteam.com/wp-content/uploads/Java.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Java">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://frutbunn.com/wp-content/uploads/2015/06/js.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Html5 Css Javascript">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://icon-icons.com/icons2/478/PNG/512/Bitcoin_46999.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bitcoin">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://crackberry.com/sites/crackberry.com/files/styles/large/public/topic_images/2013/ANDROID.png?itok=xhm7jaxS" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Android">
+    </div>
+  
+    <div id="myDIV" style="display: none;">
+
+      <div class="w3-col m3">
+      <img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Github">
+     </div>
+
+      <div class="w3-col m3">
+      <img src="https://www.archlinux.org/static/vector_tux.864e6cdcc23e.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Linux Shell">
+     </div>  
+     
+     <div class="w3-col m3">
+      <img src="http://mherman.org/images/mocha-chaijs.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Mocha Chai automation testing">
+     </div> 
+
+      <div class="w3-col m3">
+      <img src="https://yt3.ggpht.com/-6FLljGveAfw/AAAAAAAAAAI/AAAAAAAAAAA/Of9vPj-uj7I/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="selenium Webdriver">
+     </div> 
+
+     <div class="w3-col m3">
+      <img src="http://www.theodo.fr/uploads/blog//2015/11/mongodb.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Mongo Db">
+     </div>
+
+     <div class="w3-col m3">
+      <img src="http://www.msfusa2000.com/elearning/images/php-mysql.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Php Mysql">
+     </div>
+
+     <div class="w3-col m3">
+      <img src="http://o7planning.org/en/10129/cache/images/i/710264.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Spring Mvc">
+     </div>
+
+     <div class="w3-col m3">
+      <img src="http://algoworks.com.s3-us-west-2.amazonaws.com/new-algoworks/wp-content/uploads/2016/03/02151003/Choosing-Automated-Testing-Frameworks.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Phantom Casper selenium">
+     </div>
+
+     <br>
+    </div>
+  <br>
+    <button class="w3-button w3-padding-large w3-light-grey" id="loadMore" onclick="loadMore()" style="margin-top:64px">LOAD MORE</button>
+
+  </div>
+</div>
+
+<!-- Second Parallax Image with PROJECTS Text -->
+<div id="projects" class="bgimg-4 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PROJECTS</span>
+  </div>
+</div>
+
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="skill">
+  <h3 class="w3-center">MY PROJECTS</h3>
+
+<hr class="shadow">
+ <br> 
+  <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" style="width: 200px;height: 5%;">Job sites PROJECTS</span>
+   <br>
+   <br>
+    <div class="w3-row-padding w3-center">
+   
+    <div class="w3-card-24 w3-col m3 ">
+      <img src="https://lh3.googleusercontent.com/00APBMVQh3yraN704gKCeM63KzeQ-zHUi5wK6E9TjRQ26McyqYBt-zy__4i8GXDAfeys=w300" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Angular JS">
+    </div>
+    
+    <div class="w3-card-24 w3-col m3">
+      <img src="/assets/images/indeed.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Angular JS">
+    </div>
+   
+
+   <div class="w3-card-24 w3-col m3">
+      <img src="/assets/images/Monster.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Angular JS">
+    </div>
+   
+
+    
+
+      <div class="w3-card-24 w3-col m3">
+      <img src="/assets/images/dice2.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Angular JS">
+    </div>
+
+   </div>
+
+      <br>
+   <br>
+   <div class="Container"> 
+     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" style="width: 200px;height: 5%;">website projects</span>
+   <br>
+   <br>
+    <div class="w3-row-padding w3-center">
+<div class="w3-card-24 w3-col m4">
+      <img src="/assets/images/heroku2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Angular JS">
+    </div>
+    </div>
+   </div>
+
+</div>  
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">Contact Details</h3>
+  <p class="w3-center"><em>Contact me for any JOB OPPORTUNITY OR FREELANCE PROJECTS!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    
+    
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+    </div>
+    
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Los Angeles, US<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 619-606-7338<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: daxshmehra10@gmail.com<br>
+      </div>
+      <p><i class="fa fa-coffee"></i> leave me a note:</p>
+      <form action="" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" id="name" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" id="email" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" id="msg" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" onclick="mailme()" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+
+      
+      
+      </form>
+    </div>
+  </div>
+</div>
+
+ 
+   
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-44 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-amber"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-large w3-blue">
+  <p>Find me on work media.</p>
+  <a href="https://www.linkedin.com/in/daxesh-mehra-a89328138/"><button class="btn-success fa fa-linkedin w3-hover-opacity"></button></a>
+  <a href="https://www.github.com/daxesh10"><button class="btn-danger fa fa-github w3-hover-opacity"></button></a>
+  </div>
+  <p>Powered by <a href="https://www.heroku.com/" title="W3.CSS" target="_blank" class="w3-hover-text-green">Herokuapp.com</a></p>
+</footer>
+ 
+
+
+</body>
+</html>
