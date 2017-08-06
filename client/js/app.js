@@ -32,6 +32,45 @@
 
              $scope.dev = " daxesh mehra" 
 
+
+             let updateViews=()=>{
+
+                    let ref = firebase.database().ref('mydata')
+                    let views = ref.child("/websiteData/views/-Kq0-hPtqXjvWpHqeFd3")            
+                    let obj = $firebaseObject(views)            
+                    obj.$loaded().then(function(){
+
+                        $scope.views = obj.$value
+                    })
+
+             }
+
+             $scope.updateViews = ()=>{
+                    let ref = firebase.database().ref('mydata')
+                    let views = ref.child("/websiteData/views/-Kq0-hPtqXjvWpHqeFd3")            
+                    let obj = $firebaseObject(views)            
+                    obj.$loaded().then(function(){
+
+                        let val =  obj.$value
+                        val++
+                        $log.info("view vals", val)
+                        ref.child("/websiteData/views/-Kq0-hPtqXjvWpHqeFd3").set(val)
+                        
+                        
+                    })
+
+                    updateViews()
+            }
+
+
+           
+
+
+
+
+
+
+
           let getDoctorLocations = ()=>{   
             let ref = firebase.database().ref('mydata')
             let docs = ref.child("doctors").child("loaction")
@@ -109,9 +148,11 @@
                     var errorMessage = error.message;
                     
                         console.log(errorCode , errorMessage)
-                     $scope.loginError = error.message
+                     $scope.signUpError = error.message
+                     $scope.loginToast(error.message)
+                       
                         $timeout(function(){
-                            $scope.loginError = ""
+                            $scope.signUpError = ""
                         },7000) 
                     // ...
                     });
@@ -167,11 +208,12 @@
                     console.log("error",error.message)
                     var errorCode = error.code;
                     var errorMessage = error.message;
- 
+                    $scope.loginToast(error.message)
+                    $scope.loginError = error.message
                     if(error)
                     {
                            
-                        $scope.loginError = error.message
+                        
                         $timeout(function(){
                             $scope.loginError = ""
                         },7000) 
@@ -282,7 +324,41 @@ $scope.currentUser = false
 
   })
 
- 
+ app.controller("viewsCtrl", function($scope,$firebaseObject,$firebaseArray,$log,$http)
+    {
+           let updateLikes=()=>{
+
+                    let ref = firebase.database().ref('mydata')
+                    let likes1 = ref.child("/websiteData/likes/-Kq0-DDwPPdIfrCFhe1L")            
+                    let obj1 = $firebaseObject(likes1)            
+                    obj1.$loaded().then(function(){
+
+                        $scope.likes = obj1.$value
+                    })
+
+             }
+
+             updateLikes()
+             
+             $scope.updateLikes = ()=>{
+                   
+                   $log.info("clikced like")
+                    let ref = firebase.database().ref('mydata')
+                    let likes = ref.child("/websiteData/likes/-Kq0-DDwPPdIfrCFhe1L")            
+                    let obj = $firebaseObject(likes)            
+                    obj.$loaded().then(function(){
+
+                        let val =  obj.$value
+                        val++
+                        $log.info("likes vals", val)
+                        ref.child("/websiteData/likes/-Kq0-DDwPPdIfrCFhe1L").set(val)
+                        
+                        
+                    })
+
+                    updateLikes()
+                }
+    })
        
   app.controller("jobListCtrl",
   function($scope,$firebaseObject,$firebaseArray,$log)
@@ -643,15 +719,37 @@ app.directive("logo",function(){
         
     }
 }) 
-app.directive("map",function(){
+app.directive("maps",function(){
 
     return {
 
          restrict:"ACE",
-       templateUrl:"views/map.html"
+         templateUrl:"views/map.html"
         
     }
 }) 
+
+app.directive("views",function(){
+
+      return {
+
+         restrict:"ACE",
+       templateUrl:"views/websiteView.html"
+      // controller:"viewsCtrl"
+        
+    }
+})
+
+app.directive("likes",function(){
+
+      return {
+
+         restrict:"ACE",
+       templateUrl:"views/websiteLikes.html"
+     // controller:"viewsCtrl"
+        
+    }
+})
 
 app.controller('mapCtrl', function($scope) {
       

@@ -30,23 +30,42 @@ let initViews = () =>{
 likeref.push("20")
 }
 
+
+let update=(val)=>{
+
+        let updateRef1 = ref.child('/websiteData/likes/-Kq0-DDwPPdIfrCFhe1L')
+            updateRef1.set(val)
+            console.log("val is",val)
+        }
+
+
 let updateLikes = ()=>{
 
+        let updateRef = ref.child('/websiteData/likes/-Kq0-DDwPPdIfrCFhe1L')
+        
+            updateRef.on('value',snap=>{
+
+            let val = snap.val()
+            val++
+            update(val)
+
+            })
+}
+
+
+
+let getLikes = (callback)=>{
+
 let updateRef = ref.child('/websiteData/likes/-Kq0-DDwPPdIfrCFhe1L')
+ updateRef.on('value',snap=>{
 
-    let update=(val)=>{
+     let value = snap.val()
+     
 
-        updateRef.set(val)
-    }
-    
-    updateRef.on('value',snap=>{
+     
+     callback(value)
+ })
 
-      let val = snap.val()
-      val++
-      update(val)
-      
-        console.log("likes :"+snap.val())
-    })
 }
 
 
@@ -356,7 +375,8 @@ firebaseGetRecentImageDownload:firebaseGetRecentImageDownload,
 updateViews:updateViews,
 updateLikes:updateLikes,
 postReview:postReview,
-getReviews:getReviews
+getReviews:getReviews,
+getLikes:getLikes
 
 }
 

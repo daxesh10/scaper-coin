@@ -82,14 +82,15 @@
 </style>
 
        </head>
-   <body ng-app="firstApplication" ng-controller="myctrl" ng-cloak>
+   <body ng-app="firstApplication" ng-controller="myctrl" data-ng-init="updateViews()" ng-cloak>
 
      <!-- Second Parallax Image with Portfolio Text -->
     <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-5 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-   <span class="w3-xxlarge w3-text-teal w3-wide">views</span>
-    <span class="w3-xxlarge w3-text-teal w3-wide">like</span>
+   <div views></div>
+   <div likes></div>
+   
   
   </div>
 </div>
@@ -141,7 +142,7 @@
        <md-tab label="Dashboard">
         <md-content class="md-padding">
         
-          <div ng-init="profileToggle=false" user></div>
+          <div ng-init="profileToggle=false;loginToggle=true" ng-show="loginToggle" user></div>
          
          <div ng-show="profileToggle">
          
@@ -153,7 +154,7 @@
       
       <md-tab label="Blog">
         <md-content class="md-padding">        
-          
+            
           <div w3></div>
          </md-content>
       </md-tab>
